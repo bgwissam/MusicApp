@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.musicapp.MainActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Search"
+        style="@style/SearchBar"
+        android:background="@drawable/rounded_editedtext"
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:columnCount="3"
+        android:padding="25dp"
+        android:rowCount="4">
+
+        <TextView
+            android:id="@+id/pop"
+            style="@style/CategoryStyle"
+            android:background="@color/category_song"
+            android:text="@string/pop_music" />
+
+        <TextView
+            android:id="@+id/rap"
+            style="@style/CategoryStyle"
+            android:background="@color/category_song"
+            android:text="@string/rap_music" />
+
+        <TextView
+            android:id="@+id/rock"
+            style="@style/CategoryStyle"
+            android:background="@color/category_song"
+            android:text="@string/rock_music" />
+
+        <TextView
+            android:id="@+id/country"
+            style="@style/CategoryStyle"
+            android:background="@color/category_song"
+            android:text="@string/country_music" />
+
+        <TextView
+            android:id="@+id/blues"
+            style="@style/CategoryStyle"
+            android:background="@color/category_song"
+            android:text="@string/blues_music" />
+
+        <TextView
+            android:id="@+id/jaz"
+            style="@style/CategoryStyle"
+            android:background="@color/category_song"
+            android:text="@string/jaz_music" />
+
+        <TextView
+            android:id="@+id/test_sound"
+            style="@style/CategoryStyle"
+            android:background="@color/category_song"
+            android:text="Test Sound" />
+    </GridLayout>
+</LinearLayout>
