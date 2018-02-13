@@ -5,19 +5,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by hp on 2/8/2018.
  */
 
 public class BluesMusic extends AppCompatActivity {
+    //numbers array
+    ArrayList<Song> songs = new ArrayList<Song>();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.song_list);
 
-        //numbers array
-       ArrayList<Song> songs = new ArrayList<Song>();
+
         //list of words
         songs.add(new Song("Mumish Boy", "Muddy Waters"));
         songs.add(new Song("Boom Boom", "John Lee Hocker"));

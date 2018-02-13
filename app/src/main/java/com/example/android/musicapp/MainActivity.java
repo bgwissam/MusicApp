@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         TextView jaz = (TextView) findViewById(R.id.jaz);
         TextView blues = (TextView) findViewById(R.id.blues);
         TextView Test = (TextView) findViewById(R.id.test_sound);
+        Button Check = (Button) findViewById(R.id.Search);
 
 
 
@@ -89,6 +91,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent testsound = new Intent(MainActivity.this, TestSound.class);
                 startActivity(testsound);
 
+            }
+        });
+
+        Check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent checkSong = new Intent(MainActivity.this, SearchBar.class);
+                startActivity(checkSong);
             }
         });
 
