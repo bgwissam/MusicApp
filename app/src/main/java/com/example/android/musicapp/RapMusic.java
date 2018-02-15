@@ -22,7 +22,7 @@ public class RapMusic extends AppCompatActivity {
         //list of words
         songs.add(new Song("God's Plan", "Drake"));
         songs.add(new Song("Bodak Yellow", "Cardi B"));
-        songs.add(new Song("DNA" , "Kendrick Lamar"));
+        songs.add(new Song("DNA", "Kendrick Lamar"));
         songs.add(new Song("Rockstar", "Post Malone"));
         songs.add(new Song("Unforgettable", "Frensh Montana"));
         songs.add(new Song("Icon", "Jadon Smith"));

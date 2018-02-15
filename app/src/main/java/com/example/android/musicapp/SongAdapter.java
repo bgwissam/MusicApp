@@ -17,14 +17,14 @@ public class SongAdapter extends ArrayAdapter<Song> {
     private static final String LOG_TAG = SongAdapter.class.getSimpleName();
 
     public SongAdapter(Activity context, ArrayList<Song> words) {
-        super(context,0, words);
+        super(context, 0, words);
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent) {
 
         View listItemView = convertView;
-        if(listItemView == null){
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.song_list, parent, false);
         }
         //get the location of the object in the list

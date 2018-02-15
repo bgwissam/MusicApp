@@ -22,7 +22,7 @@ public class JazMusic extends AppCompatActivity {
         //list of words
         songs.add(new Song("Take Five", "Dave Brubeck"));
         songs.add(new Song("Summertime", "Ella Fitzgerald"));
-        songs.add(new Song("Strange Fruit" , "Billie Holiday"));
+        songs.add(new Song("Strange Fruit", "Billie Holiday"));
         songs.add(new Song("Take the A Train", "Dave Brubeck"));
         songs.add(new Song("Body and Soul", "Coleman Hawkins"));
         songs.add(new Song("Sing, Sing, Sing", "Benny Goodman"));

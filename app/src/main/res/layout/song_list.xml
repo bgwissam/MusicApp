@@ -10,7 +10,8 @@
         android:id="@+id/music_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"/>
+        android:orientation="vertical"
+        android:background="@drawable/main_background"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -18,11 +19,13 @@
         android:paddingLeft="16dp"
         android:paddingTop="16dp"
         android:textSize="20sp"
+        android:textColor="#FFFFFF"
         android:id="@+id/song_name"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
         android:textSize="12sp"
+        android:textColor="#FFFFFF"
         android:id="@+id/singer_name"/>
 </LinearLayout>

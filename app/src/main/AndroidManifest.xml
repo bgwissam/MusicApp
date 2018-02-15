@@ -28,8 +28,6 @@
             android:label="@string/rap_music"/>
         <activity android:name="RockMusic"
             android:label="@string/rock_music"/>
-        <activity android:name=".TestSound"
-            android:label="Test"/>
         <activity android:name=".SearchBar"
             android:label="Search">
         </activity>

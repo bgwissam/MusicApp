@@ -22,7 +22,7 @@ public class PopMusic extends AppCompatActivity {
         //list of words
         songs.add(new Song("Perfect", "Ed Sheeran"));
         songs.add(new Song("Havana", "Camila Cabello"));
-        songs.add(new Song("Shape of You" , "Ed Sheeran"));
+        songs.add(new Song("Shape of You", "Ed Sheeran"));
         songs.add(new Song("New Rules", "Dua Lipa"));
         songs.add(new Song("Closer", "The Chainsmoker"));
         songs.add(new Song("Too Good at Goodbyes", "Sam Smith"));

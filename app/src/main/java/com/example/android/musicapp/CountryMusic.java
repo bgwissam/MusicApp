@@ -22,7 +22,7 @@ public class CountryMusic extends AppCompatActivity {
         //list of words
         songs.add(new Song("losing Sleep", "Chris Young"));
         songs.add(new Song("Written in the Sand", "Old Dominion"));
-        songs.add(new Song("Tennessee Whiskey" , "Chris Stapleton"));
+        songs.add(new Song("Tennessee Whiskey", "Chris Stapleton"));
         songs.add(new Song("Body Like a Back Road", "All on Me"));
         songs.add(new Song("The Dance", "Garth Brooks"));
         songs.add(new Song("Broken Halos", "Chris Stepleton"));

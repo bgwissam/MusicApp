@@ -14,6 +14,7 @@ import java.util.List;
 public class BluesMusic extends AppCompatActivity {
     //numbers array
     ArrayList<Song> songs = new ArrayList<Song>();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +24,7 @@ public class BluesMusic extends AppCompatActivity {
         //list of words
         songs.add(new Song("Mumish Boy", "Muddy Waters"));
         songs.add(new Song("Boom Boom", "John Lee Hocker"));
-        songs.add(new Song("The Thrill is gone" , "B.B. King"));
+        songs.add(new Song("The Thrill is gone", "B.B. King"));
         songs.add(new Song("Call it Stormy Monday", "T-Bone Walker"));
         songs.add(new Song("I'm your Hoochie Coochie Man", "Muddy Waters"));
         songs.add(new Song("Dust My Broom", "Elmore James"));

@@ -4,7 +4,7 @@
     <string name="pop_music">POP</string>
     <string name="rap_music">RAP</string>
     <string name="rock_music">ROCK</string>
-    <string name="country_music">COUNTRY</string>
+    <string name="country_music">COUNT</string>
     <string name="blues_music">BLUES</string>
     <string name="jaz_music">JAZ</string>
 </resources>

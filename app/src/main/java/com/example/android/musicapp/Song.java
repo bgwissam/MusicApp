@@ -5,12 +5,12 @@ package com.example.android.musicapp;
  */
 public class Song {
     //Create a variable for the Song name
-    public  String mSongName;
+    public String mSongName;
     //Create a variable for the Singer Name
-    public  String mSingerName;
+    public String mSingerName;
 
     //default constructor
-    public Song (String songName, String singerName){
+    public Song(String songName, String singerName) {
         mSongName = songName;
 
         mSingerName = singerName;
@@ -21,7 +21,7 @@ public class Song {
 
     }
 
-    public String getSingerName (){
+    public String getSingerName() {
         return mSingerName;
     }
 }
