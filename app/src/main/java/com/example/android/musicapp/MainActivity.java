@@ -21,14 +21,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Set the content of the activity to use the activity_main.xml layout file
-        setContentView(R.layout.activity_main);
         TextView pop = (TextView) findViewById(R.id.pop);
         TextView rap = (TextView) findViewById(R.id.rap);
         TextView rock = (TextView) findViewById(R.id.rock);
         TextView country = (TextView) findViewById(R.id.country);
         TextView jaz = (TextView) findViewById(R.id.jaz);
         TextView blues = (TextView) findViewById(R.id.blues);
-        Button Check = (Button) findViewById(R.id.Search);
+        Button Check = (Button) findViewById(R.id.search_button);
 
 
         pop.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        final EditText sendValue = (EditText) findViewById(R.id.search);
+        final EditText sendValue = (EditText) findViewById(R.id.search_edit_text);
 
         Check.setOnClickListener(new View.OnClickListener() {
             @Override

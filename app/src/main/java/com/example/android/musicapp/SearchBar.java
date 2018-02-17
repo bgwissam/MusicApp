@@ -28,15 +28,16 @@ public class SearchBar extends AppCompatActivity {
         setContentView(R.layout.search_result);
 
         //obtain the text from the text box
-        search = findViewById(R.id.search);
+        search = findViewById(R.id.search_edit_text);
         search.setText(getIntent().getStringExtra("editTextValue"));
 
         String findSong = search.getText().toString();
 
 
-        BluesMusic blues = new BluesMusic();
-        ArrayList<Song> allsongs;
-        allsongs = blues.songs;
+        BluesMusic bluesSongs = new BluesMusic();
+        ArrayList<Song> allsongs = null;
+
+        allsongs = bluesSongs.getBluesSongs();
         ArrayList<Song> foundSong = new ArrayList<Song>();
 
 

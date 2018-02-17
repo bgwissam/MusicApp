@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -38,6 +39,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
         TextView englishText = (TextView) listItemView.findViewById(R.id.singer_name);
         //set the text on the text view
         englishText.setText(currentWord.getSingerName());
+
 
         return listItemView;
     }

@@ -10,8 +10,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical" />
 
-    <TextView
-        android:id="@+id/song_name"
+    <EditText
+        android:id="@+id/search_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
