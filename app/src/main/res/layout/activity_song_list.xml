@@ -9,14 +9,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-    <TextView
+    <Button
         android:id="@+id/pop"
         style="@style/SmallButtons"
         android:background="@drawable/background_text_view"
         android:text="P"
         android:layout_weight="1"/>
 
-    <TextView
+    <Button
         android:id="@+id/rap"
         style="@style/SmallButtons"
         android:background="@drawable/background_text_view"
@@ -24,28 +24,28 @@
         android:layout_weight="1"
         />
 
-    <TextView
+    <Button
         android:id="@+id/rock"
         style="@style/SmallButtons"
         android:background="@drawable/background_text_view"
         android:text="RO"
         android:layout_weight="1"/>
 
-    <TextView
+    <Button
         android:id="@+id/country"
         style="@style/SmallButtons"
         android:background="@drawable/background_text_view"
         android:text="C"
         android:layout_weight="1"/>
 
-    <TextView
+    <Button
         android:id="@+id/blues"
         style="@style/SmallButtons"
         android:background="@drawable/background_text_view"
         android:text="B"
         android:layout_weight="1"/>
 
-    <TextView
+    <Button
         android:id="@+id/jaz"
         style="@style/SmallButtons"
         android:background="@drawable/background_text_view"
@@ -67,12 +67,14 @@
         android:paddingTop="16dp"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
-        android:id="@+id/song_name"/>
+        android:id="@+id/song_name"
+        android:paddingStart="16dp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
         android:textSize="12sp"
         android:textColor="#FFFFFF"
-        android:id="@+id/singer_name"/>
+        android:id="@+id/singer_name"
+        android:paddingStart="16dp" />
 </LinearLayout>

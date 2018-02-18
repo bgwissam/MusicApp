@@ -7,4 +7,5 @@
     <string name="country_music">COUNT</string>
     <string name="blues_music">BLUES</string>
     <string name="jaz_music">JAZ</string>
+    <string name="search_hint">Search</string>
 </resources>

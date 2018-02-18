@@ -4,26 +4,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by hp on 2/8/2018.
  */
 
-public class BluesMusic extends AppCompatActivity {
-    //numbers array
+public class BluesMusicActivity extends AppCompatActivity {
+    //Array list that will hold the song and artist name
     public static ArrayList<Song> songs = new ArrayList<Song>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.song_list);
+        setContentView(R.layout.activity_song_list);
 
 
         //list of words
@@ -56,7 +53,7 @@ public class BluesMusic extends AppCompatActivity {
             //this will open upon clicking on the pop music list
             @Override
             public void onClick(View view) {
-                Intent popIntent = new Intent(BluesMusic.this, PopMusic.class);
+                Intent popIntent = new Intent(BluesMusicActivity.this, PopMusicActivity.class);
                 startActivity(popIntent);
             }
         });
@@ -65,7 +62,7 @@ public class BluesMusic extends AppCompatActivity {
             //this will open upon clicking the Rap music list
             @Override
             public void onClick(View view) {
-                Intent rapIntent = new Intent(BluesMusic.this, RapMusic.class);
+                Intent rapIntent = new Intent(BluesMusicActivity.this, RapMusicActivity.class);
                 startActivity(rapIntent);
             }
         });
@@ -74,7 +71,7 @@ public class BluesMusic extends AppCompatActivity {
             //this will open upon clicking Jaz music List
             @Override
             public void onClick(View view) {
-                Intent jazIntent = new Intent(BluesMusic.this, JazMusic.class);
+                Intent jazIntent = new Intent(BluesMusicActivity.this, JazMusicActivity.class);
                 startActivity(jazIntent);
             }
         });
@@ -83,7 +80,7 @@ public class BluesMusic extends AppCompatActivity {
             //this will open upon clicking the Blues music list
             @Override
             public void onClick(View view) {
-                Intent bluesIntent = new Intent(BluesMusic.this, BluesMusic.class);
+                Intent bluesIntent = new Intent(BluesMusicActivity.this, BluesMusicActivity.class);
                 startActivity(bluesIntent);
             }
         });
@@ -92,7 +89,7 @@ public class BluesMusic extends AppCompatActivity {
             //this will open upond clicking the Country music list
             @Override
             public void onClick(View view) {
-                Intent countryIntent = new Intent(BluesMusic.this, CountryMusic.class);
+                Intent countryIntent = new Intent(BluesMusicActivity.this, CountryMusicActivity.class);
                 startActivity(countryIntent);
 
             }
@@ -102,7 +99,7 @@ public class BluesMusic extends AppCompatActivity {
             //this will open upon clicking on the Rock music list
             @Override
             public void onClick(View view) {
-                Intent rockIntent = new Intent(BluesMusic.this, RockMusic.class);
+                Intent rockIntent = new Intent(BluesMusicActivity.this, RockMusicActivity.class);
                 startActivity(rockIntent);
             }
         });
@@ -110,7 +107,7 @@ public class BluesMusic extends AppCompatActivity {
 
 
     }
-    //set the array llist value
+    //set the array list value
     public void setArrayList(ArrayList<Song> songs){
         this.songs = songs;
     }

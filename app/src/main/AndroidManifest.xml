@@ -16,19 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BluesMusic"
+        <activity android:name=".BluesMusicActivity"
             android:label="@string/blues_music"/>
-        <activity android:name=".CountryMusic"
+        <activity android:name=".CountryMusicActivity"
             android:label="@string/country_music"/>
-        <activity android:name=".JazMusic"
+        <activity android:name=".JazMusicActivity"
             android:label="@string/jaz_music"/>
-        <activity android:name=".PopMusic"
+        <activity android:name=".PopMusicActivity"
             android:label="@string/pop_music"/>
-        <activity android:name=".RapMusic"
+        <activity android:name=".RapMusicActivity"
             android:label="@string/rap_music"/>
-        <activity android:name="RockMusic"
+        <activity android:name=".RockMusicActivity"
             android:label="@string/rock_music"/>
-        <activity android:name=".SearchBar"
+        <activity android:name=".SearchBarActivity"
             android:label="Search">
         </activity>
     </application>

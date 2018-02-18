@@ -1,17 +1,12 @@
 package com.example.android.musicapp;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import junit.framework.Test;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,20 +16,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Set the content of the activity to use the activity_main.xml layout file
-        TextView pop = (TextView) findViewById(R.id.pop);
-        TextView rap = (TextView) findViewById(R.id.rap);
-        TextView rock = (TextView) findViewById(R.id.rock);
-        TextView country = (TextView) findViewById(R.id.country);
-        TextView jaz = (TextView) findViewById(R.id.jaz);
-        TextView blues = (TextView) findViewById(R.id.blues);
-        Button Check = (Button) findViewById(R.id.search_button);
+        TextView pop = findViewById(R.id.pop);
+        TextView rap = findViewById(R.id.rap);
+        TextView rock = findViewById(R.id.rock);
+        TextView country = findViewById(R.id.country);
+        TextView jaz = findViewById(R.id.jaz);
+        TextView blues = findViewById(R.id.blues);
+        Button Check = findViewById(R.id.search_button);
 
 
         pop.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking on the pop music list
             @Override
             public void onClick(View view) {
-                Intent popIntent = new Intent(MainActivity.this, PopMusic.class);
+                Intent popIntent = new Intent(MainActivity.this, PopMusicActivity.class);
                 startActivity(popIntent);
             }
         });
@@ -43,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             //this will open upon clicking on the Rock music list
             @Override
             public void onClick(View view) {
-                Intent rockIntent = new Intent(MainActivity.this, RockMusic.class);
+                Intent rockIntent = new Intent(MainActivity.this, RockMusicActivity.class);
                 startActivity(rockIntent);
             }
         });
@@ -52,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             //this will open upon clicking Jaz music List
             @Override
             public void onClick(View view) {
-                Intent jazIntent = new Intent(MainActivity.this, JazMusic.class);
+                Intent jazIntent = new Intent(MainActivity.this, JazMusicActivity.class);
                 startActivity(jazIntent);
             }
         });
@@ -61,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             //this will open upon clicking the Rap music list
             @Override
             public void onClick(View view) {
-                Intent rapIntent = new Intent(MainActivity.this, RapMusic.class);
+                Intent rapIntent = new Intent(MainActivity.this, RapMusicActivity.class);
                 startActivity(rapIntent);
 
             }
@@ -71,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             //this will open upon clicking the Blues music list
             @Override
             public void onClick(View view) {
-                Intent bluesIntent = new Intent(MainActivity.this, BluesMusic.class);
+                Intent bluesIntent = new Intent(MainActivity.this, BluesMusicActivity.class);
                 startActivity(bluesIntent);
 
             }
@@ -81,19 +76,19 @@ public class MainActivity extends AppCompatActivity {
             //this will open upond clicking the Country music list
             @Override
             public void onClick(View view) {
-                Intent countryIntent = new Intent(MainActivity.this, CountryMusic.class);
+                Intent countryIntent = new Intent(MainActivity.this, CountryMusicActivity.class);
                 startActivity(countryIntent);
 
             }
         });
 
 
-        final EditText sendValue = (EditText) findViewById(R.id.search_edit_text);
+        final EditText sendValue = findViewById(R.id.search_edit_text);
 
         Check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent checkSong = new Intent(MainActivity.this, SearchBar.class);
+                Intent checkSong = new Intent(MainActivity.this, SearchBarActivity.class);
                 checkSong.putExtra("editTextValue", sendValue.getText().toString());
                 startActivity(checkSong);
             }

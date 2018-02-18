@@ -1,13 +1,11 @@
 package com.example.android.musicapp;
 
-/**
- * Created by hp on 2/9/2018.
- */
+
 public class Song {
     //Create a variable for the Song name
-    public String mSongName;
+    public final String mSongName;
     //Create a variable for the Singer Name
-    public String mSingerName;
+    public final String mSingerName;
 
     //default constructor
     public Song(String songName, String singerName) {
