@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -36,18 +37,25 @@ public class BluesMusicActivity extends AppCompatActivity {
 
         SongAdapter itemsAdapter = new SongAdapter(this, songs);
 
-        ListView listView = (ListView) findViewById(R.id.music_list_view);
+        ListView listView = findViewById(R.id.music_list_view);
 
         listView.setAdapter(itemsAdapter);
+        //these text views will implement listners to open other activities in the app
+        TextView pop = findViewById(R.id.pop);
+        TextView rap = findViewById(R.id.rap);
+        TextView rock = findViewById(R.id.rock);
+        TextView country = findViewById(R.id.country);
+        TextView jaz = findViewById(R.id.jaz);
+        TextView blues = findViewById(R.id.blues);
+        Button home = findViewById(R.id.home_view);
 
-
-
-        TextView pop = (TextView) findViewById(R.id.pop);
-        TextView rap = (TextView) findViewById(R.id.rap);
-        TextView rock = (TextView) findViewById(R.id.rock);
-        TextView country = (TextView) findViewById(R.id.country);
-        TextView jaz = (TextView) findViewById(R.id.jaz);
-        TextView blues = (TextView) findViewById(R.id.blues);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainIntent = new Intent(BluesMusicActivity.this, MainActivity.class);
+                startActivity(mainIntent);
+            }
+        });
 
         pop.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking on the pop music list
@@ -57,7 +65,6 @@ public class BluesMusicActivity extends AppCompatActivity {
                 startActivity(popIntent);
             }
         });
-
         rap.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking the Rap music list
             @Override
@@ -66,7 +73,6 @@ public class BluesMusicActivity extends AppCompatActivity {
                 startActivity(rapIntent);
             }
         });
-
         jaz.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking Jaz music List
             @Override
@@ -75,7 +81,6 @@ public class BluesMusicActivity extends AppCompatActivity {
                 startActivity(jazIntent);
             }
         });
-
         blues.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking the Blues music list
             @Override
@@ -84,7 +89,6 @@ public class BluesMusicActivity extends AppCompatActivity {
                 startActivity(bluesIntent);
             }
         });
-
         country.setOnClickListener(new View.OnClickListener() {
             //this will open upond clicking the Country music list
             @Override
@@ -94,7 +98,6 @@ public class BluesMusicActivity extends AppCompatActivity {
 
             }
         });
-
         rock.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking on the Rock music list
             @Override
@@ -103,9 +106,6 @@ public class BluesMusicActivity extends AppCompatActivity {
                 startActivity(rockIntent);
             }
         });
-
-
-
     }
     //set the array list value
     public void setArrayList(ArrayList<Song> songs){

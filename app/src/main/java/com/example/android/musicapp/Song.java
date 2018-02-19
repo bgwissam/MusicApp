@@ -14,10 +14,7 @@ public class Song {
         mSingerName = singerName;
     }
 
-    public String getSongName() {
-        return mSongName;
-
-    }
+    public String getSongName() {return mSongName;}
 
     public String getSingerName() {
         return mSingerName;

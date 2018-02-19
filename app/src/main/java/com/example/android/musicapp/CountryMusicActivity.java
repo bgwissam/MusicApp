@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -44,7 +45,15 @@ public class CountryMusicActivity extends AppCompatActivity {
         TextView country = findViewById(R.id.country);
         TextView jaz = findViewById(R.id.jaz);
         TextView blues = findViewById(R.id.blues);
+        Button home = findViewById(R.id.home_view);
 
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainIntent = new Intent(CountryMusicActivity.this, MainActivity.class);
+                startActivity(mainIntent);
+            }
+        });
         pop.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking on the pop music list
             @Override

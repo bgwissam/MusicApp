@@ -15,15 +15,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
+        android:paddingStart="16dp"
         android:paddingTop="16dp"
-        android:textSize="20sp"
-        android:paddingStart="16dp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/singer_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
-        android:textSize="12sp"
-        android:paddingStart="16dp" />
+        android:paddingStart="16dp"
+        android:textSize="12sp" />
 </LinearLayout>

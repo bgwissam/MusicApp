@@ -31,12 +31,10 @@ public class SongAdapter extends ArrayAdapter<Song> {
         TextView songName = listItemView.findViewById(R.id.song_name);
         //set the text on the miwak text view
         songName.setText(currentWord.getSongName());
-
         //find the text view with the english_text id
         TextView singerName = listItemView.findViewById(R.id.singer_name);
         //set the text on the text view
         singerName.setText(currentWord.getSingerName());
-
 
         return listItemView;
     }

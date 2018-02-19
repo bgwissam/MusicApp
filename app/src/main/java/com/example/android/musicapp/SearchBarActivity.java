@@ -23,17 +23,16 @@ public class SearchBarActivity extends AppCompatActivity {
         //obtain the text from the text box
         search = findViewById(R.id.search_edit_text);
         search.setText(getIntent().getStringExtra("editTextValue"));
-
+        //will trasnfer the edit text to String which will be used for comparing
         String findSong = search.getText().toString();
-
-
+        //calling the BlueMusic activity to check the list
         BluesMusicActivity bluesSongs = new BluesMusicActivity();
         ArrayList<Song> allsongs = null;
         bluesSongs.setArrayList(BluesMusicActivity.songs);
-
+        //call the getBluesSongs class
         allsongs = bluesSongs.getBluesSongs();
+        //save the found song in an Arraylist
         ArrayList<Song> foundSong = new ArrayList<>();
-
 
         //the loop will search for the matching song within the array
         for (int i = 0; i < allsongs.size(); i++) {
@@ -51,6 +50,5 @@ public class SearchBarActivity extends AppCompatActivity {
                 notFound.setText("Song not found!");
             }
         }
-
     }
 }

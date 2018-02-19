@@ -8,4 +8,6 @@
     <string name="blues_music">BLUES</string>
     <string name="jaz_music">JAZ</string>
     <string name="search_hint">Search</string>
+    <string name="home_view">Home</string>
+    <string name="exit_button">Exit</string>
 </resources>

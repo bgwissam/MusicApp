@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         TextView blues = findViewById(R.id.blues);
         Button Check = findViewById(R.id.search_button);
 
-
         pop.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking on the pop music list
             @Override
@@ -33,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(popIntent);
             }
         });
-
         rock.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking on the Rock music list
             @Override
@@ -42,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(rockIntent);
             }
         });
-
         jaz.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking Jaz music List
             @Override
@@ -51,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(jazIntent);
             }
         });
-
         rap.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking the Rap music list
             @Override
@@ -61,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
         blues.setOnClickListener(new View.OnClickListener() {
             //this will open upon clicking the Blues music list
             @Override
@@ -71,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
         country.setOnClickListener(new View.OnClickListener() {
             //this will open upond clicking the Country music list
             @Override
@@ -81,8 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
+        //Will take the input for searching for a song or artist
         final EditText sendValue = findViewById(R.id.search_edit_text);
 
         Check.setOnClickListener(new View.OnClickListener() {
@@ -93,8 +86,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(checkSong);
             }
         });
-
-
     }
-
 }
