@@ -27,27 +27,72 @@ public class SearchBarActivity extends AppCompatActivity {
         String findSong = search.getText().toString();
         //calling the BlueMusic activity to check the list
         BluesMusicActivity bluesSongs = new BluesMusicActivity();
+        CountryMusicActivity countrySongs = new CountryMusicActivity();
+        JazMusicActivity jazSongs = new JazMusicActivity();
+        PopMusicActivity popSongs = new PopMusicActivity();
+        RapMusicActivity rapSongs = new RapMusicActivity();
+        RockMusicActivity rockSongs = new RockMusicActivity();
+        //Will hold the content of all arraylists
         ArrayList<Song> allsongs = null;
-        bluesSongs.setArrayList(BluesMusicActivity.songs);
-        //call the getBluesSongs class
-        allsongs = bluesSongs.getBluesSongs();
+        //Will hold the content of each arraylist seperately
+        ArrayList<Song> blueList = null;
+        ArrayList<Song> countryList = null;
+        ArrayList<Song> jazList = null;
+        ArrayList<Song> popList = null;
+        ArrayList<Song> rapList = null;
+        ArrayList<Song> rockList = null;
+
+        //call the getXXXXXSongs class
+        blueList = bluesSongs.getBluesSongs();
+        countryList = countrySongs.getCountrySongs();
+        jazList = jazSongs.getJazSongs();
+        popList = popSongs.getPopSongs();
+        rapList = rapSongs.getRapSongs();
+        rockList = rockSongs.getRockSongs();
+        //the following method will add all the arraylist in one list
+        allsongs = new ArrayList<>();
+        allsongs.addAll(blueList);
+        allsongs.addAll(countryList);
+        allsongs.addAll(jazList);
+        allsongs.addAll(popList);
+        allsongs.addAll(rapList);
+        allsongs.addAll(rockList);
+
         //save the found song in an Arraylist
         ArrayList<Song> foundSong = new ArrayList<>();
-
+        //to indicate if a song was found
+        int findingIndicater = 0;
         //the loop will search for the matching song within the array
         for (int i = 0; i < allsongs.size(); i++) {
-            String songName = allsongs.get(i).toString();
-            if (findSong == songName) {
-                Log.i("Song Name: ", songName);
-                foundSong.add(new Song("Song Name ", songName));
+
+            String songName = (allsongs.get(i).getSongName());
+            String artistName = allsongs.get(i).getSingerName();
+            Log.i("Song Name " + songName, "\nSinger Name " + artistName);
+
+            if (findSong.toLowerCase().equals(songName.toLowerCase())) {
+                foundSong.add(new Song(songName, artistName));
                 SongAdapter foundItem = new SongAdapter(this, foundSong);
 
                 ListView listView = findViewById(R.id.search_view);
 
                 listView.setAdapter(foundItem);
-            } else {
-                TextView notFound = findViewById(R.id.song_name);
-                notFound.setText("Song not found!");
+                findingIndicater++;
+
+            }
+            else if(findSong.toLowerCase().equals(artistName.toLowerCase())){
+                foundSong.add(new Song(songName, artistName));
+                SongAdapter foundItem = new SongAdapter(this, foundSong);
+
+                ListView listView = findViewById(R.id.search_view);
+
+                listView.setAdapter(foundItem);
+                findingIndicater++;
+            }
+            else if(i == (allsongs.size()-1) && findingIndicater==0) {
+                foundSong.add(new Song("Song not found","Artist not found"));
+                SongAdapter foundItem = new SongAdapter(this, foundSong);
+                ListView listView = findViewById(R.id.search_view);
+                listView.setAdapter(foundItem);
             }
         }
     }

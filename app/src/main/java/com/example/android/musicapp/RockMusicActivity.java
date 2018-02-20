@@ -12,25 +12,15 @@ import java.util.ArrayList;
 
 
 public class RockMusicActivity extends AppCompatActivity {
-
+    //numbers array
+    ArrayList<Song> songs = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song_list);
 
-        //numbers array
-        ArrayList<Song> songs = new ArrayList<>();
         //list of words
-        songs.add(new Song("Bohemian Rhapsody", "Queen"));
-        songs.add(new Song("Stairway to Heaven", "Led Zeppelin"));
-        songs.add(new Song("Baba O'Riley", "Free Bird"));
-        songs.add(new Song("Purple Haze", "Jimi Hendrix"));
-        songs.add(new Song("Satisfaction", "The Rolling Stones"));
-        songs.add(new Song("Hey Jude", "The Beatles"));
-        songs.add(new Song("Back In Black", "AC/DC"));
-        songs.add(new Song("Smoke on the Water", "Deep Purple"));
-        songs.add(new Song("Won't get Fooled Again", "The Who"));
-        songs.add(new Song("Born to be Wild", "Steppenwolf"));
+        createSongList();
 
         SongAdapter itemsAdapter = new SongAdapter(this, songs);
 
@@ -102,5 +92,23 @@ public class RockMusicActivity extends AppCompatActivity {
                 startActivity(rockIntent);
             }
         });
+    }
+    public void createSongList(){
+        songs.add(new Song("Bohemian Rhapsody", "Queen"));
+        songs.add(new Song("Stairway to Heaven", "Led Zeppelin"));
+        songs.add(new Song("Baba O'Riley", "Free Bird"));
+        songs.add(new Song("Purple Haze", "Jimi Hendrix"));
+        songs.add(new Song("Satisfaction", "The Rolling Stones"));
+        songs.add(new Song("Hey Jude", "The Beatles"));
+        songs.add(new Song("Back In Black", "AC/DC"));
+        songs.add(new Song("Smoke on the Water", "Deep Purple"));
+        songs.add(new Song("Won't get Fooled Again", "The Who"));
+        songs.add(new Song("Born to be Wild", "Steppenwolf"));
+    }
+    //get the array list value
+    public ArrayList<Song> getRockSongs(){
+        createSongList();
+
+        return songs;
     }
 }

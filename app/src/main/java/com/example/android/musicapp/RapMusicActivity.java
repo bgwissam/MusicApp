@@ -11,24 +11,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class RapMusicActivity extends AppCompatActivity {
+    //numbers array
+    ArrayList<Song> songs = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song_list);
 
-        //numbers array
-        ArrayList<Song> songs = new ArrayList<>();
         //list of words
-        songs.add(new Song("God's Plan", "Drake"));
-        songs.add(new Song("Bodak Yellow", "Cardi B"));
-        songs.add(new Song("DNA", "Kendrick Lamar"));
-        songs.add(new Song("Rockstar", "Post Malone"));
-        songs.add(new Song("Unforgettable", "Frensh Montana"));
-        songs.add(new Song("Icon", "Jadon Smith"));
-        songs.add(new Song("Gucci Gang", "Lil Pump"));
-        songs.add(new Song("No Limit", "G-Easy"));
-        songs.add(new Song("Mask Off", "Future"));
-        songs.add(new Song("Bank Account", "21 Savage"));
+        createSongList();
 
         SongAdapter itemsAdapter = new SongAdapter(this, songs);
 
@@ -100,5 +91,23 @@ public class RapMusicActivity extends AppCompatActivity {
                 startActivity(rockIntent);
             }
         });
+    }
+    public void createSongList(){
+        songs.add(new Song("God's Plan", "Drake"));
+        songs.add(new Song("Bodak Yellow", "Cardi B"));
+        songs.add(new Song("DNA", "Kendrick Lamar"));
+        songs.add(new Song("Rockstar", "Post Malone"));
+        songs.add(new Song("Unforgettable", "Frensh Montana"));
+        songs.add(new Song("Icon", "Jadon Smith"));
+        songs.add(new Song("Gucci Gang", "Lil Pump"));
+        songs.add(new Song("No Limit", "G-Easy"));
+        songs.add(new Song("Mask Off", "Future"));
+        songs.add(new Song("Bank Account", "21 Savage"));
+    }
+    //get the array list value
+    public ArrayList<Song> getRapSongs(){
+        createSongList();
+
+        return songs;
     }
 }

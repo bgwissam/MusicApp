@@ -12,24 +12,15 @@ import java.util.ArrayList;
 
 
 public class PopMusicActivity extends AppCompatActivity {
+    //numbers array
+    ArrayList<Song> songs = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song_list);
 
-        //numbers array
-        ArrayList<Song> songs = new ArrayList<>();
         //list of words
-        songs.add(new Song("Perfect", "Ed Sheeran"));
-        songs.add(new Song("Havana", "Camila Cabello"));
-        songs.add(new Song("Shape of You", "Ed Sheeran"));
-        songs.add(new Song("New Rules", "Dua Lipa"));
-        songs.add(new Song("Closer", "The Chainsmoker"));
-        songs.add(new Song("Too Good at Goodbyes", "Sam Smith"));
-        songs.add(new Song("Attention", "Charlie Puth"));
-        songs.add(new Song("Finesse", "Bruno Mars"));
-        songs.add(new Song("Thunder", "Imagine Dragons"));
-        songs.add(new Song("End Game", "Taylor Swift"));
+        createSongList();
 
         SongAdapter itemsAdapter = new SongAdapter(this, songs);
 
@@ -101,5 +92,24 @@ public class PopMusicActivity extends AppCompatActivity {
                 startActivity(rockIntent);
             }
         });
+    }
+    public void createSongList (){
+        songs.add(new Song("Perfect", "Ed Sheeran"));
+        songs.add(new Song("Havana", "Camila Cabello"));
+        songs.add(new Song("Shape of You", "Ed Sheeran"));
+        songs.add(new Song("New Rules", "Dua Lipa"));
+        songs.add(new Song("Closer", "The Chainsmoker"));
+        songs.add(new Song("Too Good at Goodbyes", "Sam Smith"));
+        songs.add(new Song("Attention", "Charlie Puth"));
+        songs.add(new Song("Finesse", "Bruno Mars"));
+        songs.add(new Song("Thunder", "Imagine Dragons"));
+        songs.add(new Song("End Game", "Taylor Swift"));
+    }
+
+    //get the array list value
+    public ArrayList<Song> getPopSongs(){
+        createSongList();
+
+        return songs;
     }
 }

@@ -12,24 +12,14 @@ import java.util.ArrayList;
 
 
 public class JazMusicActivity extends AppCompatActivity {
+    ArrayList<Song> songs = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song_list);
 
-        //numbers array
-        ArrayList<Song> songs = new ArrayList<>();
         //list of words
-        songs.add(new Song("Take Five", "Dave Brubeck"));
-        songs.add(new Song("Summertime", "Ella Fitzgerald"));
-        songs.add(new Song("Strange Fruit", "Billie Holiday"));
-        songs.add(new Song("Take the A Train", "Dave Brubeck"));
-        songs.add(new Song("Body and Soul", "Coleman Hawkins"));
-        songs.add(new Song("Sing, Sing, Sing", "Benny Goodman"));
-        songs.add(new Song("What a Wonderful World", "Louis Armstrong"));
-        songs.add(new Song("Round Midnight", "Thelonious Monk"));
-        songs.add(new Song("The Girl from Ipanema", "Joao Gilberto"));
-        songs.add(new Song("All Blues", "John Coltrane"));
+        createSongList();
 
         SongAdapter itemsAdapter = new SongAdapter(this, songs);
 
@@ -100,5 +90,26 @@ public class JazMusicActivity extends AppCompatActivity {
                 startActivity(rockIntent);
             }
         });
+    }
+    public void createSongList (){
+        songs.add(new Song("Take Five", "Dave Brubeck"));
+        songs.add(new Song("Summertime", "Ella Fitzgerald"));
+        songs.add(new Song("Strange Fruit", "Billie Holiday"));
+        songs.add(new Song("Take the A Train", "Dave Brubeck"));
+        songs.add(new Song("Body and Soul", "Coleman Hawkins"));
+        songs.add(new Song("Sing, Sing, Sing", "Benny Goodman"));
+        songs.add(new Song("What a Wonderful World", "Louis Armstrong"));
+        songs.add(new Song("Round Midnight", "Thelonious Monk"));
+        songs.add(new Song("The Girl from Ipanema", "Joao Gilberto"));
+        songs.add(new Song("All Blues", "John Coltrane"));
+
+
+    }
+
+    //get the array list value
+    public ArrayList<Song> getJazSongs(){
+        createSongList();
+
+        return songs;
     }
 }

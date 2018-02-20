@@ -13,25 +13,14 @@ import java.util.ArrayList;
 
 
 public class CountryMusicActivity extends AppCompatActivity {
+
+    ArrayList<Song> songs = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song_list);
-
-        //numbers array
-        ArrayList<Song> songs = new ArrayList<>();
-
         //list of words
-        songs.add(new Song("losing Sleep", "Chris Young"));
-        songs.add(new Song("Written in the Sand", "Old Dominion"));
-        songs.add(new Song("Tennessee Whiskey", "Chris Stapleton"));
-        songs.add(new Song("Body Like a Back Road", "All on Me"));
-        songs.add(new Song("The Dance", "Garth Brooks"));
-        songs.add(new Song("Broken Halos", "Chris Stepleton"));
-        songs.add(new Song("Greatest Love Story", "Lanco"));
-        songs.add(new Song("All on Me", "Devin Dawson"));
-        songs.add(new Song("The Long Way", "Brett Eldredge"));
-        songs.add(new Song("You Broke Up with Me", "Walker Hayes"));
+        createSongList();
 
         SongAdapter itemsAdapter = new SongAdapter(this, songs);
 
@@ -109,5 +98,27 @@ public class CountryMusicActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+    public void createSongList (){
+
+        songs.add(new Song("losing Sleep", "Chris Young"));
+        songs.add(new Song("Written in the Sand", "Old Dominion"));
+        songs.add(new Song("Tennessee Whiskey", "Chris Stapleton"));
+        songs.add(new Song("Body Like a Back Road", "All on Me"));
+        songs.add(new Song("The Dance", "Garth Brooks"));
+        songs.add(new Song("Broken Halos", "Chris Stepleton"));
+        songs.add(new Song("Greatest Love Story", "Lanco"));
+        songs.add(new Song("All on Me", "Devin Dawson"));
+        songs.add(new Song("The Long Way", "Brett Eldredge"));
+        songs.add(new Song("You Broke Up with Me", "Walker Hayes"));
+
+    }
+
+    //get the array list value
+    public ArrayList<Song> getCountrySongs(){
+        createSongList();
+
+        return songs;
     }
 }
